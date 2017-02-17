@@ -18,7 +18,7 @@ actionDic = {
 (PLAYER_TURN, COMPUTER_TURN) = (0, 1)
 
 # Time Limit Before Losing
-timeLimit = 0.1
+timeLimit = 0.5
 allowance = 0.05
 
 class GameManager:
@@ -101,7 +101,7 @@ class GameManager:
                 self.displayer.display(self.grid)
 
             # Exceeding the Time Allotted for Any Turn Terminates the Game
-            self.updateAlarm(time.clock())
+            # self.updateAlarm(time.clock())
 
             turn = 1 - turn
         print(maxTile)
